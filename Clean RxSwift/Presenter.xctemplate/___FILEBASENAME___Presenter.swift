@@ -24,9 +24,9 @@ protocol ___FILEBASENAMEASIDENTIFIER___PresenterOutput
 
 class ___FILEBASENAMEASIDENTIFIER___Presenter: ___FILEBASENAMEASIDENTIFIER___PresenterOutput
 {
-    var input:LoginPresenterInput! {
+    var input:___FILEBASENAMEASIDENTIFIER___PresenterInput! {
         didSet {
-            self.forwardStream = input.forwardStream.flatMap(presentSomething).observeOn(MainScheduler.instance)
+            self.forwardStream = input.forwardStream.flatMap(present).observeOn(MainScheduler.instance)
         }
     }
     
@@ -34,8 +34,8 @@ class ___FILEBASENAMEASIDENTIFIER___Presenter: ___FILEBASENAMEASIDENTIFIER___Pre
     
     // MARK: - Presentation logic
     
-    func presentSomething(response: ___FILEBASENAMEASIDENTIFIER___.Response)  -> Observable<___FILEBASENAMEASIDENTIFIER___.ViewModel> {
-        let viewModel = ___FILEBASENAMEASIDENTIFIER___.Something.ViewModel()
-        output.displaySomething(viewModel: viewModel)
+    func present(response: ___FILEBASENAMEASIDENTIFIER___.Response)  -> Observable<___FILEBASENAMEASIDENTIFIER___.ViewModel> {
+        let viewModel = ___FILEBASENAMEASIDENTIFIER___.ViewModel()
+        return Observable.just(viewModel)
     }
 }

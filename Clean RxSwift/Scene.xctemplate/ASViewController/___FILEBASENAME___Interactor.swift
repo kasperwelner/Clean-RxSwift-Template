@@ -19,7 +19,7 @@ protocol ___FILEBASENAMEASIDENTIFIER___InteractorInput
 
 protocol ___FILEBASENAMEASIDENTIFIER___InteractorOutput
 {
-    var forwardStream: Observable<___FILEBASENAMEASIDENTIFIER___.Something.Response>! { get set }
+    var forwardStream: Observable<___FILEBASENAMEASIDENTIFIER___.Response>! { get set }
 }
 
 class ___FILEBASENAMEASIDENTIFIER___Interactor: ___FILEBASENAMEASIDENTIFIER___InteractorOutput
@@ -30,12 +30,12 @@ class ___FILEBASENAMEASIDENTIFIER___Interactor: ___FILEBASENAMEASIDENTIFIER___In
         }
     }
     
-    var forwardStream: Observable<___FILEBASENAMEASIDENTIFIER___.Something.Response>!
+    var forwardStream: Observable<___FILEBASENAMEASIDENTIFIER___.Response>!
     var worker: ___FILEBASENAMEASIDENTIFIER___Worker = ___FILEBASENAMEASIDENTIFIER___Worker()
     
     // MARK: - Business logic
     
-    func request(_ request: Login.Request) -> Observable<___FILEBASENAMEASIDENTIFIER___.Response>
+    func request(_ request: ___FILEBASENAMEASIDENTIFIER___.Request) -> Observable<___FILEBASENAMEASIDENTIFIER___.Response>
     {
         let response = ___FILEBASENAMEASIDENTIFIER___.Response()
         return Observable.just(response)

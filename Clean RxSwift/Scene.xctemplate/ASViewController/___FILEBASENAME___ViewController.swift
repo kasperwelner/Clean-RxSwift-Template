@@ -24,8 +24,8 @@ protocol ___FILEBASENAMEASIDENTIFIER___ViewControllerOutput
 
 class ___FILEBASENAMEASIDENTIFIER___ViewController: ASViewController<<#NodeType#>, ___FILEBASENAMEASIDENTIFIER___ViewControllerOutput
 {
-    var forwardStream:Observable<Login.Request>!
-    var input:LoginViewControllerInput!
+    var forwardStream:Observable<___FILEBASENAMEASIDENTIFIER___.Request>!
+    var input:___FILEBASENAMEASIDENTIFIER___ViewControllerInput!
     
     // MARK: - Object lifecycle
     
