@@ -13,13 +13,26 @@ import UIKit
 
 struct ___FILEBASENAMEASIDENTIFIER___
 {
-    struct Request
-    {
+    struct <#UseCase1#> {
+        struct Request
+        {
+        }
+        struct Response
+        {
+        }
+        struct ViewModel
+        {
+        }
     }
-    struct Response
-    {
-    }
-    struct ViewModel
-    {
+    struct <#UseCase2#> {
+        struct Request
+        {
+        }
+        struct Response
+        {
+        }
+        struct ViewModel
+        {
+        }
     }
 }

@@ -12,32 +12,43 @@
 import UIKit
 import RxSwift
 
-protocol ___FILEBASENAMEASIDENTIFIER___InteractorInput
+protocol ___FILEBASENAMEASIDENTIFIER___InteractorInput : class
 {
-    var forwardStream: Observable<___FILEBASENAMEASIDENTIFIER___.Request>! { get }
+    var <#UseCase1#>Subject:PublishSubject<___FILEBASENAMEASIDENTIFIER___.<#UseCase1#>.Request> { get }
+    var <#UseCase2#>Subject:PublishSubject<___FILEBASENAMEASIDENTIFIER___.<#UseCase2#>.Request> { get }
 }
 
 protocol ___FILEBASENAMEASIDENTIFIER___InteractorOutput
 {
-    var forwardStream: Observable<___FILEBASENAMEASIDENTIFIER___.Response>! { get set }
+    var <#UseCase1#>Subject:PublishSubject<___FILEBASENAMEASIDENTIFIER___.<#UseCase1#>.Response> { get }
+    var <#UseCase2#>Subject:PublishSubject<___FILEBASENAMEASIDENTIFIER___.<#UseCase2#>.Response> { get }
 }
 
 class ___FILEBASENAMEASIDENTIFIER___Interactor: ___FILEBASENAMEASIDENTIFIER___InteractorOutput
 {
-    var input:  ___FILEBASENAMEASIDENTIFIER___InteractorInput! {
+    weak var input:  ___FILEBASENAMEASIDENTIFIER___InteractorInput! {
         didSet {
-            self.forwardStream = input.forwardStream.asObservable().flatMap(request)
+            input.<#UseCase1#>Subject.map(handle).bindTo(<#UseCase1#>Subject).addDisposableTo(bag)
+            input.<#UseCase2#>Subject.map(handle).bindTo(<#UseCase2#>Subject).addDisposableTo(bag)
         }
     }
     
-    var forwardStream: Observable<___FILEBASENAMEASIDENTIFIER___.Response>!
+    var <#UseCase1#>Subject = PublishSubject<___FILEBASENAMEASIDENTIFIER___.<#UseCase1#>.Response>()
+    var <#UseCase2#>Subject = PublishSubject<___FILEBASENAMEASIDENTIFIER___.<#UseCase2#>.Response>()
+    
     var worker: ___FILEBASENAMEASIDENTIFIER___Worker = ___FILEBASENAMEASIDENTIFIER___Worker()
+    
+    let bag = DisposeBag()
     
     // MARK: - Business logic
     
-    func request(_ request: ___FILEBASENAMEASIDENTIFIER___.Request) -> Observable<___FILEBASENAMEASIDENTIFIER___.Response>
+    func handle(_ request: ___FILEBASENAMEASIDENTIFIER___.<#UseCase1#>.Request) -> ___FILEBASENAMEASIDENTIFIER___.<#UseCase1#>.Response
     {
-        let response = ___FILEBASENAMEASIDENTIFIER___.Response()
-        return Observable.just(response)
+        //Let the worker do some work and return the results
+    }
+    
+    func handle(_ request: ___FILEBASENAMEASIDENTIFIER___.<#UseCase2#>.Request) -> ___FILEBASENAMEASIDENTIFIER___.<#UseCase2#>.Response
+    {
+        //Let the worker do some work and return the results
     }
 }

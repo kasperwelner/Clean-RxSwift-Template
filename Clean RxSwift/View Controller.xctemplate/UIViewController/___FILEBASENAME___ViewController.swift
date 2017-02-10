@@ -14,17 +14,21 @@ import RxSwift
 
 protocol ___FILEBASENAMEASIDENTIFIER___ViewControllerInput
 {
-    var forwardStream:Observable<___FILEBASENAMEASIDENTIFIER___.ViewModel>! { get }
+    var <#UseCase1#>Subject:PublishSubject<___FILEBASENAMEASIDENTIFIER___.<#UseCase1#>.ViewModel>! { get }
+    var <#UseCase2#>Subject:PublishSubject<___FILEBASENAMEASIDENTIFIER___.<#UseCase2#>.ViewModel>! { get }
 }
 
 protocol ___FILEBASENAMEASIDENTIFIER___ViewControllerOutput
 {
-    var forwardStream: Observable<___FILEBASENAMEASIDENTIFIER___.Request>! { get }
+    var <#UseCase1#>Subject:PublishSubject<___FILEBASENAMEASIDENTIFIER___.<#UseCase1#>.Request> { get }
+    var <#UseCase2#>Subject:PublishSubject<___FILEBASENAMEASIDENTIFIER___.<#UseCase2#>.Request> { get }
 }
 
 class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController, ___FILEBASENAMEASIDENTIFIER___ViewControllerOutput
 {
-    var forwardStream:Observable<___FILEBASENAMEASIDENTIFIER___.Request>!
+    var <#UseCase1#>Subject = PublishSubject<___FILEBASENAMEASIDENTIFIER___.<#UseCase1#>.Request>()
+    var <#UseCase2#>Subject = PublishSubject<___FILEBASENAMEASIDENTIFIER___.<#UseCase2#>.Request>()
+    
     var input:___FILEBASENAMEASIDENTIFIER___ViewControllerInput!
     
     // MARK: - Object lifecycle
@@ -32,7 +36,7 @@ class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController, ___FILEBAS
     override func awakeFromNib()
     {
         super.awakeFromNib()
-        configureForwardStream()
+        configureOutputStreams()
         ___FILEBASENAMEASIDENTIFIER___Configurator.sharedInstance.configure(viewController: self)
         configureInputStream()
     }
@@ -46,7 +50,7 @@ class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController, ___FILEBAS
     
     //MARK: - Stream Configuration
     
-    func configureForwardStream() {
+    func configureOutputStreams() {
         //TODO: Configure the ViewController's forwardStream here
     }
     
