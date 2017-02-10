@@ -33,8 +33,8 @@ class ___FILEBASENAMEASIDENTIFIER___Presenter: ___FILEBASENAMEASIDENTIFIER___Pre
         }
     }
     
-    var <#UseCase1#>Subject = PublishSubject<___FILEBASENAMEASIDENTIFIER___.<#UseCase1#>.Response>()
-    var <#UseCase2#>Subject = PublishSubject<___FILEBASENAMEASIDENTIFIER___.<#UseCase2#>.Response>()
+    var <#UseCase1#>Subject = PublishSubject<___FILEBASENAMEASIDENTIFIER___.<#UseCase1#>.ViewModel>()
+    var <#UseCase2#>Subject = PublishSubject<___FILEBASENAMEASIDENTIFIER___.<#UseCase2#>.ViewModel>()
     
     let bag = DisposeBag()
     
