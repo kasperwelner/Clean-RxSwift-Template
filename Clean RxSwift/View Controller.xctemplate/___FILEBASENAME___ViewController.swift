@@ -14,8 +14,8 @@ import RxSwift
 
 protocol ___FILEBASENAMEASIDENTIFIER___ViewControllerInput
 {
-    var <#UseCase1#>Subject:PublishSubject<___FILEBASENAMEASIDENTIFIER___.<#UseCase1#>.ViewModel>! { get }
-    var <#UseCase2#>Subject:PublishSubject<___FILEBASENAMEASIDENTIFIER___.<#UseCase2#>.ViewModel>! { get }
+    var <#UseCase1#>Subject:PublishSubject<___FILEBASENAMEASIDENTIFIER___.<#UseCase1#>.ViewModel> { get }
+    var <#UseCase2#>Subject:PublishSubject<___FILEBASENAMEASIDENTIFIER___.<#UseCase2#>.ViewModel> { get }
 }
 
 protocol ___FILEBASENAMEASIDENTIFIER___ViewControllerOutput
@@ -24,7 +24,7 @@ protocol ___FILEBASENAMEASIDENTIFIER___ViewControllerOutput
     var <#UseCase2#>Subject:PublishSubject<___FILEBASENAMEASIDENTIFIER___.<#UseCase2#>.Request> { get }
 }
 
-class ___FILEBASENAMEASIDENTIFIER___ViewController: UICollectionViewController, ___FILEBASENAMEASIDENTIFIER___ViewControllerOutput
+class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController, ___FILEBASENAMEASIDENTIFIER___ViewControllerOutput
 {
     var <#UseCase1#>Subject = PublishSubject<___FILEBASENAMEASIDENTIFIER___.<#UseCase1#>.Request>()
     var <#UseCase2#>Subject = PublishSubject<___FILEBASENAMEASIDENTIFIER___.<#UseCase2#>.Request>()

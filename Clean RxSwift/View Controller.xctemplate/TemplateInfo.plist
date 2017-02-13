@@ -46,31 +46,6 @@
 			<key>Type</key>
 			<string>static</string>
 		</dict>
-		<dict>
-			<key>Default</key>
-			<string>UIViewController</string>
-			<key>Description</key>
-			<string>What view controller class to subclass for the new scene</string>
-			<key>FallbackHeader</key>
-			<string>#import &lt;UIKit/UIKit.h&gt;</string>
-			<key>Identifier</key>
-			<string>viewControllerSubclass</string>
-			<key>Name</key>
-			<string>Subclass of:</string>
-			<key>NotPersisted</key>
-			<true/>
-			<key>Required</key>
-			<string>YES</string>
-			<key>Type</key>
-			<string>class</string>
-			<key>Values</key>
-			<array>
-				<string>ASViewController</string>
-				<string>UIViewController</string>
-				<string>UITableViewController</string>
-				<string>UICollectionViewController</string>
-			</array>
-		</dict>
 	</array>
 	<key>Platforms</key>
 	<array>

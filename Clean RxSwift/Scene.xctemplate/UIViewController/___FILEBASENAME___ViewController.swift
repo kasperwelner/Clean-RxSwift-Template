@@ -14,8 +14,8 @@ import RxSwift
 
 protocol ___FILEBASENAMEASIDENTIFIER___ViewControllerInput
 {
-    var <#UseCase1#>Subject:PublishSubject<___FILEBASENAMEASIDENTIFIER___.<#UseCase1#>.ViewModel>! { get }
-    var <#UseCase2#>Subject:PublishSubject<___FILEBASENAMEASIDENTIFIER___.<#UseCase2#>.ViewModel>! { get }
+    var <#UseCase1#>Subject:PublishSubject<___FILEBASENAMEASIDENTIFIER___.<#UseCase1#>.ViewModel> { get }
+    var <#UseCase2#>Subject:PublishSubject<___FILEBASENAMEASIDENTIFIER___.<#UseCase2#>.ViewModel> { get }
 }
 
 protocol ___FILEBASENAMEASIDENTIFIER___ViewControllerOutput
