@@ -25,55 +25,6 @@
 			<string>text</string>
 		</dict>
 		<dict>
-			<key>Description</key>
-			<string>Include use case 1</string>
-			<key>Default</key>
-			<false/>
-			<key>Identifier</key>
-			<string>useCase1Enabled</string>
-			<key>Name</key>
-			<string>Use Case 1</string>
-			<key>Type</key>
-			<string>checkbox</string>
-		</dict>
-		<dict>
-			<key>Default</key>
-			<string>&lt;#UseCase1#&gt;</string>
-			<key>Description</key>
-			<string>Use Case 1</string>
-			<key>Identifier</key>
-			<string>useCase1</string>
-			<key>Name</key>
-			<string>Use Case 1</string>
-			<key>NotPersisted</key>
-			<true/>
-			<key>Required</key>
-			<false/>
-			<key>Type</key>
-			<string>text</string>
-			<key>RequiredOptions</key>
-			<dict>
-				<key>useCase1Enabled</key>
-				<true/>
-			</dict>
-		</dict>
-		<dict>
-			<key>Default</key>
-			<string>&lt;#UseCase2#&gt;</string>
-			<key>Description</key>
-			<string>Use Case 2</string>
-			<key>Identifier</key>
-			<string>useCase2</string>
-			<key>Name</key>
-			<string>Use Case 2</string>
-			<key>NotPersisted</key>
-			<true/>
-			<key>Required</key>
-			<false/>
-			<key>Type</key>
-			<string>text</string>
-		</dict>
-		<dict>
 			<key>Default</key>
 			<string>___VARIABLE_sceneName:identifier___</string>
 			<key>Identifier</key>
